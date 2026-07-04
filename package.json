@@ -1,0 +1,28 @@
+{
+  "name": "codity-jobs",
+  "version": "1.0.0",
+  "description": "Production-grade distributed job scheduling platform",
+  "private": true,
+  "workspaces": [
+    "packages/api",
+    "packages/worker",
+    "packages/shared",
+    "packages/dashboard"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=packages/api",
+    "dev:worker": "npm run dev --workspace=packages/worker",
+    "dev:dashboard": "npm run dev --workspace=packages/dashboard",
+    "migrate": "npm run migrate --workspace=packages/api",
+    "seed": "npm run seed --workspace=packages/api",
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
