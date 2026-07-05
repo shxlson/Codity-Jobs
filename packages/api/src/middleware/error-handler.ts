@@ -25,11 +25,9 @@ export function errorHandler(
       method: req.method,
     });
 
-    res.status(error.statusCode).json({
-      success: false,
-      error: error.message,
-      ...(error.details && { details: error.details }),
-    });
+    const body: Record<string, unknown> = { success: false, error: error.message };
+    if (error.details != null) body["details"] = error.details;
+    res.status(error.statusCode).json(body);
     return;
   }
 
