@@ -6,8 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@codity/shared": ["../shared/src"]
-    },
-    "ignoreDeprecations": "6.0"
+    }
   },
   "include": ["src"],
   "references": [
