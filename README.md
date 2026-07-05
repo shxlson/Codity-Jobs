@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Evaluator Demo & Login Credentials
+## Evaluator Demo & Login Credentials
 
 To immediately evaluate the platform with a rich, production-scale synthetic dataset (including **6 organizations, 15 projects, 25 queues, 12 global workers, 200+ completed jobs with execution histories, 80 queued jobs, 30 scheduled cron jobs, and 25 Dead Letter Queue items with deep JSON stack traces**), log into the dashboard (`http://localhost:5173`) using:
 
