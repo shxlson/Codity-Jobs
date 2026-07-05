@@ -4,7 +4,7 @@
 //  Vite proxy so no hard-coded host is needed in development.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const BASE = "/api/v1";
+const BASE = import.meta.env.VITE_API_URL ?? "/api/v1";
 
 function getAuthHeaders(): Record<string, string> {
   const token = localStorage.getItem("codity_token");
