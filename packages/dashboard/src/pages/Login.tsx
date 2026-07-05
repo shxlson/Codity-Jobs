@@ -63,6 +63,7 @@ export function LoginPage() {
             </button>
             <p style={{ fontSize: "11px", color: "var(--text-tertiary)", marginTop: "var(--space-2)", textAlign: "center", lineHeight: "1.4" }}>
               For demo purposes only. To test freshly, register or sign in with separate credentials.
+              For the first login it may take upto 30-50sec because of render.com free tier cold start :)
             </p>
           </div>
 
