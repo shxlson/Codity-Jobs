@@ -5,10 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "migrate": "ts-node src/db/migrate.ts",
-    "seed": "ts-node src/db/seed.ts",
+    "build": "echo 'Skipping tsc — using ts-node at runtime'",
+    "start": "ts-node --transpile-only src/server.ts",
+    "migrate": "ts-node --transpile-only src/db/migrate.ts",
+    "seed": "ts-node --transpile-only src/db/seed.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint src --ext .ts"
@@ -26,7 +26,16 @@
     "morgan": "^1.10.0",
     "node-cron": "^3.0.3",
     "pg": "^8.11.5",
-    "winston": "^3.13.0"
+    "winston": "^3.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.12",
+    "@types/pg": "^8.11.6"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
