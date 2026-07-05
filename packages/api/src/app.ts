@@ -31,7 +31,9 @@ export function createApp(): Application {
 
   app.use(
     cors({
-      origin: env.isDevelopment ? "*" : process.env.ALLOWED_ORIGINS?.split(","),
+      origin: process.env.ALLOWED_ORIGINS
+        ? process.env.ALLOWED_ORIGINS.split(",")
+        : "*",
       credentials: true,
     })
   );
